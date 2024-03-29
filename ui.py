@@ -7,8 +7,6 @@ import main as lg
 import font_load
 
 theme_bg = '#f5f6fa'
-FR_PRIVATE  = 0x10
-FR_NOT_ENUM = 0x20
 
 root = Tk()
 font_load.load(['font/Roboto-Italic.ttf'])

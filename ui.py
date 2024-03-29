@@ -35,9 +35,9 @@ url_label = Label(entry_Frame, text='Enter path for video:', fg='#2f3640', bg=th
 url_label.grid(sticky='w')
 
 path_label = ctk.CTkLabel(entry_Frame, text='',font=('Roboto', 1), bg_color=theme_bg, text_color='#718093', anchor='w', width=0, height=0)
-path_label.bind('<Button-1>',lambda event: lg.open_directory(path_label))
-path_label.bind('<Enter>',lambda event: lg.label_in(path_label))
-path_label.bind('<Leave>',lambda event: lg.label_out(path_label))
+path_label.bind('<Button-1>',lambda e: lg.open_directory(path_label))
+path_label.bind('<Enter>',lambda e: lg.label_in(path_label))
+path_label.bind('<Leave>',lambda e: lg.label_out(path_label))
 path_label.grid(sticky='w')
 
 path_button = ctk.CTkButton(entry_Frame, text='Browse', fg_color='#718093', width=30, height=15, command=lambda: lg.browse_button(path_button, path_label))

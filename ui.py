@@ -16,8 +16,14 @@ root.resizable(False, False)
 root.geometry("400x320")
 root.configure(bg=theme_bg)
 
-entry_Frame = Frame(root, bg=theme_bg)
-entry_Frame.place(x=20,y=20)
+container = Frame(root, bg=theme_bg)
+container.place(x=20)
+
+label = Label(container, bg=theme_bg, text='YouTube video downloader', font='Roboto 16 bold')
+label.grid(sticky='w', ipady=20)
+
+entry_Frame = Frame(container, bg=theme_bg)
+entry_Frame.grid()
 
 url_label = Label(entry_Frame, text='Enter video url:', fg='#2f3640', bg=theme_bg, font='Roboto 12 bold')
 url_label.grid(sticky='w')

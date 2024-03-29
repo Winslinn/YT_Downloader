@@ -16,5 +16,6 @@ def label_out(label: ctk.CTkLabel):
 def browse_button(button: ctk.CTkButton, label: ctk.CTkEntry):
     directory = filedialog.askdirectory()
     
-    label.configure(text=directory, font=('Roboto', 12), width=label.winfo_width, cursor='hand2')
-    button.configure(text='Change')
+    if directory != '':
+        button.configure(text='Change')
+        label.configure(text=directory, font=('Roboto', 12), width=label.winfo_width, cursor='hand2')
